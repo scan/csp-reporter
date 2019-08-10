@@ -1,0 +1,5 @@
+.env
+/vendor
+__debug_bin
+*.exe
+/.vscode
