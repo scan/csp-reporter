@@ -55,7 +55,7 @@ func init() {
 	pgPort := os.Getenv("POSTGRES_PORT")
 	pgDatabase := os.Getenv("POSTGRES_DB")
 
-	databaseURL = fmt.Sprintf("postgres://%s:%s@%s:%s/%s?sslmode=disable", pgUser, pgPassword, pgServer, pgPort, pgDatabase)
+	databaseURL = fmt.Sprintf("postgres://%s:%s@%s:%s/%s?sslmode=require", pgUser, pgPassword, pgServer, pgPort, pgDatabase)
 }
 
 func loggingMiddleware(h http.Handler) http.Handler {
